@@ -40,6 +40,23 @@ public class java_180321 {
             System.out.println(element);
         }
 
+            // Multidimesional Array
+        int[][] arr1 = new int[2][3];
+        arr1[0][0] = 101;
+        arr1[0][1] = 102;
+        arr1[0][2] = 103;
+        arr1[1][0] = 201;
+        arr1[1][1] = 202;
+        arr1[1][2] = 203;
+
+        for(int i=0; i<arr1.length; i++)
+        {
+            for(int j=0; j<arr1[i].length; j++){
+                System.out.print(arr1[i][j]);
+                System.out.print(" ");
+            }
+            System.out.print("\n");
+        }
 
 
     }
