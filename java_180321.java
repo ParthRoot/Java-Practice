@@ -3,11 +3,12 @@ public class java_180321 {
     public static void main(String[] args){
         System.out.println("Hello Wolrd");
         Scanner sc = new Scanner(System.in);
+        /*
         System.out.println("Enter the size of array");
         int n = sc.nextInt();
         int[] arr = new int[n];
         //Array
-        /*
+
 
         arr[0] = 25;
         arr[1] = 30;
@@ -32,7 +33,7 @@ public class java_180321 {
 
         int[] x1; //declaration
         x1 = new int[25]; //memory allocation
-*/
+
 
         // for each loop
         int[] x2 = {25,85,95,45,25}; //declaration and intialize
@@ -40,7 +41,8 @@ public class java_180321 {
             System.out.println(element);
         }
 
-            // Multidimesional Array
+
+        // Multidimesional Array
         int[][] arr1 = new int[2][3];
         arr1[0][0] = 101;
         arr1[0][1] = 102;
@@ -59,5 +61,65 @@ public class java_180321 {
         }
 
 
+        //method Static
+        int x = 10;
+        int y = 20;
+        int z = sum(x,y);
+        System.out.println(z);
+
+        java_180321 obj = new java_180321(); // create object for calling method
+        int w = obj.mul(x, y);
+        System.out.println(w);
+
+
+        java_180321 obj1 = new java_180321();
+        obj1.foo();
+        obj1.foo(25);
+        obj1.foo(5285,745);
+*/
+
+        java_180321 obj2 = new java_180321();
+        System.out.println(obj2.hello(2,5,4));
+
+
     }
+    // using static we not create object for calling method in main function
+    static int sum(int a, int b){
+        int c;
+        c = a + b;
+        return c;
+    }
+
+    //without static method we use the object to calling method in main function
+    int mul(int a, int b){
+        int c;
+        c = a * b;
+        return c;
+    }
+
+    // method overloading
+    void foo(){
+        System.out.println("This is:");
+    }
+
+    void foo(int a){
+        System.out.println("This is :"+a);
+    }
+
+    int foo(int a, int b){
+        System.out.println("This is :"+a);
+        System.out.println("This is:" +b);
+        return 34;
+    }
+
+    // varargs
+    int hello(int ...arr){
+        int result = 0;
+        for(int i=0;i<arr.length;i++){
+            result = result + arr[i];
+        }
+
+        return result;
+    }
+
 }
