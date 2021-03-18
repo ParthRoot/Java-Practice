@@ -81,6 +81,12 @@ public class java_180321 {
         java_180321 obj2 = new java_180321();
         System.out.println(obj2.hello(2,5,4));
 
+        // recursion
+        int n=4;
+        System.out.println(factorial(n));
+        System.out.println(factorial_intecrative(n));
+
+
 
     }
     // using static we not create object for calling method in main function
@@ -120,6 +126,35 @@ public class java_180321 {
         }
 
         return result;
+    }
+
+    //recursion
+    static int factorial(int n){
+        if(n == 0 || n == 1){
+            return 1;
+        }
+        else{
+            int factorial = n * factorial(n-1);
+            return factorial;
+        }
+    }
+
+    // iteractive factorial
+    static int factorial_intecrative(int n){
+
+        if (n == 0 || n == 1){
+            return 1;
+        }
+        else{
+            int factorial1 = 1;
+            for(int i=1;i<=n;i++){
+
+                factorial1 *= i;
+
+            }
+            return factorial1;
+
+        }
     }
 
 }
